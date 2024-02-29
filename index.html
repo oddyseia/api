@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Pokemon Örneği</title>
 	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="modal.css">
 </head>
+
 <body>
 	<h1 class="head">Pokemon Kartları</h1>
 	<div id="pokemon-kartları"></div>
+	<div id="modal" class="modal-container">
+		<div class="modal-wrapper">
+			<div id="modalContent" class="modal-wrapper"></div>
+			<div onclick="closeModal()" class="modal-close">X</div>
+		</div>
+	</div>
 	<script src="script.js"></script>
 </body>
+
 </html>
