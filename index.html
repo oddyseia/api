@@ -5,9 +5,46 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Pokemon Örneği</title>
 	<link rel="stylesheet" href="styles.css">
+	<script>
+	  document.addEventListener('DOMContentLoaded', () => {
+		const header = document.querySelector('.head');
+		const body = document.body;
+		const button = document.createElement('button');
+		button.className = 'dark-mode-button';
+		header.appendChild(button);
+		
+	
+		const toggleDarkMode = () => {
+		  body.classList.toggle('dark');
+		  body.classList.toggle('light');
+	
+		  if (body.classList.contains('dark')) {
+			button.classList.add('dark');
+			button.classList.remove('light');
+		  } else {
+			button.classList.add('light');
+			button.classList.remove('dark');
+		  }
+		};
+
+		button.addEventListener('click', toggleDarkMode);
+	  });
+	</script>
+	
 </head>
 <body>
 	<h1 class="head">Pokemon Kartları</h1>
+	<div class="container">
+		<div class="interior">
+		  <a class="btn" href="#open-modal">Hakkımızda</a>
+		</div>
+	  </div>
+	  <div id="open-modal" class="modal-window">
+		<div>
+		  <a href="#" title="Close" class="modal-close">Kapat</a>
+		  <h1>Hayırlısı</h1>
+	  </div>
+	  </div>
 	<div id="pokemon-kartları"></div>
 	<script src="script.js"></script>
 </body>
